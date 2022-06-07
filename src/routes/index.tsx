@@ -1,5 +1,9 @@
-import Auth from '@/pages/auth/Auth';
+import { Spin } from 'antd';
+import React from 'react';
 import { Navigate, useRoutes } from 'react-router-dom';
+
+const Auth = React.lazy(() => import('@/pages/auth/Auth'));
+const DefaultLayout = React.lazy(() => import('@/components/default-layout/DefaultLayout'));
 
 const Routes = [
 	{
@@ -8,11 +12,29 @@ const Routes = [
 	},
 	{
 		path: '/login',
-		element: <Auth />,
+		element: (
+			<React.Suspense fallback={<Spin />}>
+				<Auth />
+			</React.Suspense>
+		),
 	},
 	{
 		path: '/register',
-		element: <Auth />,
+		element: (
+			<React.Suspense fallback={<Spin />}>
+				<Auth />
+			</React.Suspense>
+		),
+	},
+	{
+		path: '/category',
+		element: (
+			<React.Suspense fallback={<Spin />}>
+				<DefaultLayout>
+					<span>content</span>
+				</DefaultLayout>
+			</React.Suspense>
+		),
 	},
 ];
 

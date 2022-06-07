@@ -60,23 +60,20 @@ export const GlobalClasses = css`
 	.p0 {
 		padding: ${(props) => props.theme.spacing.padding.p0};
 	}
-	.p5 {
-		padding: ${(props) => props.theme.spacing.padding.p5};
+	.p2 {
+		padding: ${(props) => props.theme.spacing.padding.p2};
 	}
-	.p10 {
-		padding: ${(props) => props.theme.spacing.padding.p10};
+	.p4 {
+		padding: ${(props) => props.theme.spacing.padding.p4};
 	}
-	.p15 {
-		padding: ${(props) => props.theme.spacing.padding.p15};
+	.p8 {
+		padding: ${(props) => props.theme.spacing.padding.p8};
 	}
-	.p20 {
-		padding: ${(props) => props.theme.spacing.padding.p20};
+	.p16 {
+		padding: ${(props) => props.theme.spacing.padding.p16};
 	}
-	.p25 {
-		padding: ${(props) => props.theme.spacing.padding.p25};
-	}
-	.p30 {
-		padding: ${(props) => props.theme.spacing.padding.p30};
+	.p32 {
+		padding: ${(props) => props.theme.spacing.padding.p32};
 	}
 	.p48 {
 		padding: ${(props) => props.theme.spacing.padding.p48};
@@ -85,23 +82,20 @@ export const GlobalClasses = css`
 	.pt0 {
 		padding: ${(props) => props.theme.spacing.padding.pt0};
 	}
-	.pt5 {
-		padding: ${(props) => props.theme.spacing.padding.pt5};
+	.pt2 {
+		padding: ${(props) => props.theme.spacing.padding.pt2};
 	}
-	.pt10 {
-		padding: ${(props) => props.theme.spacing.padding.pt10};
+	.pt4 {
+		padding: ${(props) => props.theme.spacing.padding.pt4};
 	}
-	.pt15 {
-		padding: ${(props) => props.theme.spacing.padding.pt15};
+	.pt8 {
+		padding: ${(props) => props.theme.spacing.padding.pt8};
 	}
-	.pt20 {
-		padding: ${(props) => props.theme.spacing.padding.pt20};
+	.pt16 {
+		padding: ${(props) => props.theme.spacing.padding.pt16};
 	}
-	.pt25 {
-		padding: ${(props) => props.theme.spacing.padding.pt25};
-	}
-	.pt30 {
-		padding: ${(props) => props.theme.spacing.padding.pt30};
+	.pt32 {
+		padding: ${(props) => props.theme.spacing.padding.pt32};
 	}
 	.pt48 {
 		padding: ${(props) => props.theme.spacing.padding.pt48};
@@ -110,48 +104,42 @@ export const GlobalClasses = css`
 	.pb0 {
 		padding: ${(props) => props.theme.spacing.padding.pb0};
 	}
-	.pb5 {
-		padding: ${(props) => props.theme.spacing.padding.pb5};
+	.pb2 {
+		padding: ${(props) => props.theme.spacing.padding.pb2};
 	}
-	.pb10 {
-		padding: ${(props) => props.theme.spacing.padding.pb10};
+	.pb4 {
+		padding: ${(props) => props.theme.spacing.padding.pb4};
 	}
-	.pb15 {
-		padding: ${(props) => props.theme.spacing.padding.pb15};
+	.pb8 {
+		padding: ${(props) => props.theme.spacing.padding.pb8};
 	}
-	.pb20 {
-		padding: ${(props) => props.theme.spacing.padding.pb20};
+	.pb16 {
+		padding: ${(props) => props.theme.spacing.padding.pb16};
 	}
-	.pb25 {
-		padding: ${(props) => props.theme.spacing.padding.pb25};
-	}
-	.pb30 {
-		padding: ${(props) => props.theme.spacing.padding.pb30};
+	.pb32 {
+		padding: ${(props) => props.theme.spacing.padding.pb32};
 	}
 	.pb48 {
-		padding: ${(props) => props.theme.spacing.padding.pt48};
+		padding: ${(props) => props.theme.spacing.padding.pb48};
 	}
 
 	.pl0 {
 		padding: ${(props) => props.theme.spacing.padding.pl0};
 	}
-	.pl5 {
-		padding: ${(props) => props.theme.spacing.padding.pl5};
+	.pl2 {
+		padding: ${(props) => props.theme.spacing.padding.pl2};
 	}
-	.pl10 {
-		padding: ${(props) => props.theme.spacing.padding.pl10};
+	.pl4 {
+		padding: ${(props) => props.theme.spacing.padding.pl4};
 	}
-	.pl15 {
-		padding: ${(props) => props.theme.spacing.padding.pl15};
+	.pl8 {
+		padding: ${(props) => props.theme.spacing.padding.pl8};
 	}
-	.pl20 {
-		padding: ${(props) => props.theme.spacing.padding.pl20};
+	.pl16 {
+		padding: ${(props) => props.theme.spacing.padding.pl16};
 	}
-	.pl25 {
-		padding: ${(props) => props.theme.spacing.padding.pl25};
-	}
-	.pl30 {
-		padding: ${(props) => props.theme.spacing.padding.pl30};
+	.pl32 {
+		padding: ${(props) => props.theme.spacing.padding.pl32};
 	}
 	.pl48 {
 		padding: ${(props) => props.theme.spacing.padding.pl48};
@@ -160,150 +148,132 @@ export const GlobalClasses = css`
 	.pr0 {
 		padding: ${(props) => props.theme.spacing.padding.pr0};
 	}
-	.pr5 {
-		padding: ${(props) => props.theme.spacing.padding.pr5};
+	.pr2 {
+		padding: ${(props) => props.theme.spacing.padding.pr2};
 	}
-	.pr10 {
-		padding: ${(props) => props.theme.spacing.padding.pr10};
+	.pr4 {
+		padding: ${(props) => props.theme.spacing.padding.pr4};
 	}
-	.pr15 {
-		padding: ${(props) => props.theme.spacing.padding.pr15};
+	.pr8 {
+		padding: ${(props) => props.theme.spacing.padding.pr8};
 	}
-	.pr20 {
-		padding: ${(props) => props.theme.spacing.padding.pr20};
+	.pr16 {
+		padding: ${(props) => props.theme.spacing.padding.pr16};
 	}
-	.pr25 {
-		padding: ${(props) => props.theme.spacing.padding.pr25};
-	}
-	.pr30 {
-		padding: ${(props) => props.theme.spacing.padding.pr30};
+	.pr32 {
+		padding: ${(props) => props.theme.spacing.padding.pr32};
 	}
 	.pr48 {
-		padding: ${(props) => props.theme.spacing.padding.pt48};
+		padding: ${(props) => props.theme.spacing.padding.pr48};
 	}
 
 	.m0 {
-		margin: ${(props) => props.theme.spacing.margin.m0};
+		padding: ${(props) => props.theme.spacing.padding.m0};
 	}
-	.m5 {
-		margin: ${(props) => props.theme.spacing.margin.m5};
+	.m2 {
+		padding: ${(props) => props.theme.spacing.padding.m2};
 	}
-	.m10 {
-		margin: ${(props) => props.theme.spacing.margin.m10};
+	.m4 {
+		padding: ${(props) => props.theme.spacing.padding.m4};
 	}
-	.m15 {
-		margin: ${(props) => props.theme.spacing.margin.m15};
+	.m8 {
+		padding: ${(props) => props.theme.spacing.padding.m8};
 	}
-	.m20 {
-		margin: ${(props) => props.theme.spacing.margin.m20};
+	.m16 {
+		padding: ${(props) => props.theme.spacing.padding.m16};
 	}
-	.m25 {
-		margin: ${(props) => props.theme.spacing.margin.m25};
-	}
-	.m30 {
-		margin: ${(props) => props.theme.spacing.margin.m30};
+	.m32 {
+		padding: ${(props) => props.theme.spacing.padding.m32};
 	}
 	.m48 {
-		margin: ${(props) => props.theme.spacing.margin.m48};
+		padding: ${(props) => props.theme.spacing.padding.m48};
 	}
 
 	.mt0 {
-		margin: ${(props) => props.theme.spacing.margin.mt0};
+		padding: ${(props) => props.theme.spacing.padding.mt0};
 	}
-	.mt5 {
-		margin: ${(props) => props.theme.spacing.margin.mt5};
+	.mt2 {
+		padding: ${(props) => props.theme.spacing.padding.mt2};
 	}
-	.mt10 {
-		margin: ${(props) => props.theme.spacing.margin.mt10};
+	.mt4 {
+		padding: ${(props) => props.theme.spacing.padding.mt4};
 	}
-	.mt15 {
-		margin: ${(props) => props.theme.spacing.margin.mt15};
+	.mt8 {
+		padding: ${(props) => props.theme.spacing.padding.mt8};
 	}
-	.mt20 {
-		margin: ${(props) => props.theme.spacing.margin.mt20};
+	.mt16 {
+		padding: ${(props) => props.theme.spacing.padding.mt16};
 	}
-	.mt25 {
-		margin: ${(props) => props.theme.spacing.margin.mt25};
-	}
-	.mt30 {
-		margin: ${(props) => props.theme.spacing.margin.mt30};
+	.mt32 {
+		padding: ${(props) => props.theme.spacing.padding.mt32};
 	}
 	.mt48 {
-		margin: ${(props) => props.theme.spacing.margin.mt48};
+		padding: ${(props) => props.theme.spacing.padding.mt48};
 	}
 
 	.mb0 {
-		margin: ${(props) => props.theme.spacing.margin.mb0};
+		padding: ${(props) => props.theme.spacing.padding.mb0};
 	}
-	.mb5 {
-		margin: ${(props) => props.theme.spacing.margin.mb5};
+	.mb2 {
+		padding: ${(props) => props.theme.spacing.padding.mb2};
 	}
-	.mb10 {
-		margin: ${(props) => props.theme.spacing.margin.mb10};
+	.mb4 {
+		padding: ${(props) => props.theme.spacing.padding.mb4};
 	}
-	.mb15 {
-		margin: ${(props) => props.theme.spacing.margin.mb15};
+	.mb8 {
+		padding: ${(props) => props.theme.spacing.padding.mb8};
 	}
-	.mb20 {
-		margin: ${(props) => props.theme.spacing.margin.mb20};
+	.mb16 {
+		padding: ${(props) => props.theme.spacing.padding.mb16};
 	}
-	.mb25 {
-		margin: ${(props) => props.theme.spacing.margin.mb25};
-	}
-	.mb30 {
-		margin: ${(props) => props.theme.spacing.margin.mb30};
+	.mb32 {
+		padding: ${(props) => props.theme.spacing.padding.mb32};
 	}
 	.mb48 {
-		margin: ${(props) => props.theme.spacing.margin.mb48};
+		padding: ${(props) => props.theme.spacing.padding.mb48};
 	}
 
 	.ml0 {
-		margin: ${(props) => props.theme.spacing.margin.ml0};
+		padding: ${(props) => props.theme.spacing.padding.ml0};
 	}
-	.ml5 {
-		margin: ${(props) => props.theme.spacing.margin.ml5};
+	.ml2 {
+		padding: ${(props) => props.theme.spacing.padding.ml2};
 	}
-	.ml10 {
-		margin: ${(props) => props.theme.spacing.margin.ml10};
+	.ml4 {
+		padding: ${(props) => props.theme.spacing.padding.ml4};
 	}
-	.ml15 {
-		margin: ${(props) => props.theme.spacing.margin.ml15};
+	.ml8 {
+		padding: ${(props) => props.theme.spacing.padding.ml8};
 	}
-	.ml20 {
-		margin: ${(props) => props.theme.spacing.margin.ml20};
+	.ml16 {
+		padding: ${(props) => props.theme.spacing.padding.ml16};
 	}
-	.ml25 {
-		margin: ${(props) => props.theme.spacing.margin.ml25};
-	}
-	.ml30 {
-		margin: ${(props) => props.theme.spacing.margin.ml30};
+	.ml32 {
+		padding: ${(props) => props.theme.spacing.padding.ml32};
 	}
 	.ml48 {
-		margin: ${(props) => props.theme.spacing.margin.mt48};
+		padding: ${(props) => props.theme.spacing.padding.ml48};
 	}
 
 	.mr0 {
-		margin: ${(props) => props.theme.spacing.margin.mr0};
+		padding: ${(props) => props.theme.spacing.padding.mr0};
 	}
-	.mr5 {
-		margin: ${(props) => props.theme.spacing.margin.mr5};
+	.mr2 {
+		padding: ${(props) => props.theme.spacing.padding.mr2};
 	}
-	.mr10 {
-		margin: ${(props) => props.theme.spacing.margin.mr10};
+	.mr4 {
+		padding: ${(props) => props.theme.spacing.padding.mr4};
 	}
-	.mr15 {
-		margin: ${(props) => props.theme.spacing.margin.mr15};
+	.mr8 {
+		padding: ${(props) => props.theme.spacing.padding.mr8};
 	}
-	.mr20 {
-		margin: ${(props) => props.theme.spacing.margin.mr20};
+	.mr16 {
+		padding: ${(props) => props.theme.spacing.padding.mr16};
 	}
-	.mr25 {
-		margin: ${(props) => props.theme.spacing.margin.mr25};
-	}
-	.mr30 {
-		margin: ${(props) => props.theme.spacing.margin.mr30};
+	.mr32 {
+		padding: ${(props) => props.theme.spacing.padding.mr32};
 	}
 	.mr48 {
-		margin: ${(props) => props.theme.spacing.margin.mr48};
+		padding: ${(props) => props.theme.spacing.padding.mr48};
 	}
 `;

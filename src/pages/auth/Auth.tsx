@@ -1,8 +1,10 @@
+import { authApi } from '@/apis';
+import { AuthModel } from '@/apis/auth/auth.model';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
-import { Button, Form, Input, Typography } from 'antd';
+import { Button, Form, Input, message, Typography } from 'antd';
 import { useForm } from 'antd/lib/form/Form';
-import React, { FC } from 'react';
-import { Link, matchPath, useLocation } from 'react-router-dom';
+import React, { FC, useState } from 'react';
+import { Link, matchPath, useLocation, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const AuthLayout = styled.div`
@@ -28,29 +30,47 @@ const AuthLayout = styled.div`
 
 const Auth: FC = () => {
 	const location = useLocation();
-	const match = matchPath(location.pathname, '/login');
+	const isLogin = matchPath(location.pathname, '/login');
+	const navigate = useNavigate();
 
 	const [form] = useForm();
 
-	const onFinish = (formValues: any) => {
-		const requestBody: any = {
+	const [loading, setLoading] = useState(false);
+
+	const handleSubmitForm = async (formValues: AuthModel.AuthRequestBody) => {
+		const requestBody: AuthModel.AuthRequestBody = {
 			username: formValues.username.trim().toLowerCase(),
 			password: formValues.password.trim().toLowerCase(),
 		};
-		if (!match) {
-			requestBody.confirmPassword = formValues.confirmPassword.trim().toLowerCase();
+		if (!isLogin) {
+			requestBody.confirmPassword = formValues.confirmPassword!.trim().toLowerCase();
 		}
-		console.log('Received values of form: ', requestBody);
+
+		try {
+			setLoading(true);
+			if (isLogin) {
+				await authApi.login(requestBody);
+				setLoading(false);
+				navigate('/category');
+			} else {
+				await authApi.register(requestBody);
+				setLoading(false);
+				navigate('/login');
+			}
+		} catch (error: any) {
+			setLoading(false);
+			message.error(error.message);
+		}
 	};
 
 	return (
 		<AuthLayout>
 			<div className="auth-container p48">
 				<Typography.Title level={2} className="auth-title">
-					{match ? 'Đăng Nhập' : 'Đăng Ký'}
+					{isLogin ? 'Đăng Nhập' : 'Đăng Ký'}
 				</Typography.Title>
 
-				<Form form={form} onFinish={onFinish}>
+				<Form form={form} onFinish={handleSubmitForm}>
 					<Form.Item
 						name="username"
 						rules={[
@@ -75,21 +95,22 @@ const Auth: FC = () => {
 						<Input prefix={<LockOutlined />} type="password" placeholder="Password" />
 					</Form.Item>
 
-					{!match && (
+					{!isLogin && (
 						<Form.Item
 							name="confirmPassword"
 							hasFeedback
+							dependencies={['password']}
 							rules={[
 								{ required: true, message: 'Confirm password là bắt buộc!' },
 								{ min: 6, message: 'Password phải có ít nhất 6 ký tự' },
 								{ whitespace: true, message: 'Username là bắt buộc!' },
 								({ getFieldValue }) => ({
-									validator(_, value) {
+									validator: (_, value) => {
 										if (!value || getFieldValue('password') === value) {
 											return Promise.resolve();
 										}
 
-										return Promise.reject(new Error('Confirm password không trùng khớp!'));
+										return Promise.reject(new Error('Mật khẩu xác nhận không trùng khớp!'));
 									},
 								}),
 							]}
@@ -99,13 +120,13 @@ const Auth: FC = () => {
 					)}
 
 					<Form.Item>
-						<Button type="primary" htmlType="submit" block>
-							{match ? 'Đăng Nhập' : 'Đăng Ký'}
+						<Button type="primary" htmlType="submit" loading={loading} block>
+							{isLogin ? 'Đăng Nhập' : 'Đăng Ký'}
 						</Button>
 
 						<p className="mt10 p0">
-							<Link to={match ? '/register' : '/login'} onClick={() => form.resetFields()}>
-								{match ? 'Đăng ký' : 'Đăng nhập'}
+							<Link to={isLogin ? '/register' : '/login'} onClick={() => form.resetFields()}>
+								{isLogin ? 'Đăng ký' : 'Đăng nhập'}
 							</Link>
 						</p>
 					</Form.Item>

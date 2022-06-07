@@ -1,1 +1,1 @@
-export { default as AuthApi } from './auth/auth.api';
+export { default as authApi } from './auth/auth.api';
